@@ -31,6 +31,7 @@ node(''){
 		pip install opencv-python
 		pip install python-appium-client
    		'''
+	}
    	stage('running the tests'){
    	dir(''){// basically with the directory with has the sanity test bench ready to run 
    		bat 'test_bench.py' // run the test bench code  
@@ -39,7 +40,6 @@ node(''){
    	}
 
 
-	}
 	}
 	catch(err){
 	echo" Firmware is not properly updated" 
